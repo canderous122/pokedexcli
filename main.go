@@ -18,7 +18,7 @@ func main() {
 		}
 		cInput := cleanInput(input)
 		firstWord := cInput[0]
-		if cmd, ok := commandMap[firstWord]; ok {
+		if cmd, ok := getCommands()[firstWord]; ok {
 			cmd.callback()
 		} else {
 			fmt.Println("unknown command:", firstWord)
